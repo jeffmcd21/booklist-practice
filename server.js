@@ -28,6 +28,7 @@ app.use((req, res, next) => {
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
+app.use("/public", express.static("public"))
 
 
 // ** --- ROUTER --- ** //
